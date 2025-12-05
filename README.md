@@ -12,7 +12,7 @@ Secure, feature-rich MCP server for VMware vCenter 8.0+.
 
 ## Quickstart
 ```bash
-cp .env.example .env
+cp env.example .env
 # Fill VCENTER_* and tokens
 python -m vsphere_mcp_pro.server
 
