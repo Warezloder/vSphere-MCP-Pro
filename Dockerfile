@@ -7,10 +7,11 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
 
 COPY pyproject.toml /app/
-RUN pip install --no-cache-dir --upgrade pip &&     pip install --no-cache-dir .
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir .
 
-COPY src /app/src
-COPY .env.example /app/.env.example
+COPY vsphere_mcp_pro /app/vsphere_mcp_pro
+COPY env.example /app/env.example
 
 USER appuser
 
